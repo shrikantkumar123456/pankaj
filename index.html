@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pankaj Bhardwaj </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0f172a;
+            color: white;
+        }
+
+        /* card */
+
+        .card {
+            width: 350px;
+            padding: 40px 30px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: center;
+            box-shadow: 0 0px 80px rgba(0, 0, 0, .6);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+            50% {
+                transform: translateY(-10px)
+            }
+        }
+
+        .profile {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .text {
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: .9;
+            margin-bottom: 25px;
+        }
+
+        /* button */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 32px;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #6366f1, #06b6d4);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+            transition: .4s;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px #06b6d4;
+        }
+
+        /* sparkle animation */
+
+        .btn span {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+            animation: spark 3s infinite;
+        }
+
+        .btn span:nth-child(1) {
+            top: -10px;
+            left: 20%
+        }
+
+        .btn span:nth-child(2) {
+            top: -10px;
+            left: 50%;
+            animation-delay: 1s
+        }
+
+        .btn span:nth-child(3) {
+            top: -10px;
+            left: 80%;
+            animation-delay: 2s
+        }
+
+        @keyframes spark {
+            0% {
+                transform: translateY(0);
+                opacity: 1
+            }
+            100% {
+                transform: translateY(-40px);
+                opacity: 0
+            }
+        }
+
+        /* countdown */
+
+        .timer {
+            margin-top: 15px;
+            font-size: 13px;
+            opacity: .8;
+        }
+
+        /* disclaimer */
+
+        .disclaimer {
+            margin-top: 20px;
+            font-size: 11px;
+            opacity: .6;
+            text-align: center;
+        }
+
+        .ads {
+            margin-top: 6px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .ads a {
+            color: #22c55e;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+
+
+
+
+</head>
+
+<<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1355050376592858');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1355050376592858&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+    <div>
+
+        <div class="card">
+
+            <img class="profile" src="logo.jpeg" alt="Profile Picture">
+            <div class="text">
+                Start learning + Earning with Expert Calls🔥<br> Trusted by 12,000+ Traders🌍<br> Join our Channel for daily updates✅
+            </div>
+
+            <a class="btn" href="https://t.me/+ga0qrVKsD-RkMDhl" target="_blank" onclick="fbq('track', 'Subscribe');">
+
+<i class="fab fa-telegram"></i>
+ VIP Telegram group
+<i class="fab fa-telegram"></i>
+
+<span></span>
+<span></span>
+<span></span>
+
+</a>
+
+            <div class="timer">
+                Redirecting in <span id="count">30</span> seconds...
+            </div>
+
+        </div>
+
+        <div class="disclaimer">
+            This channel is for educational and informational purposes only.
+        </div>
+
+        <div class="ads">
+            ads Managed by <a href="https://t.me/+ga0qrVKsD-RkMDhl" target="_blank">9557467145</a>
+        </div>
+
+    </div>
+
+    <script>
+        let time = 30;
+        let counter = document.getElementById("count");
+
+        setInterval(() => {
+            time--;
+            counter.innerText = time;
+
+            if (time <= 0) {
+                window.location.href = "https://t.me/+ga0qrVKsD-RkMDhl";
+            }
+
+        }, 1000);
+    </script>
+
+</body>
+
+</html>
